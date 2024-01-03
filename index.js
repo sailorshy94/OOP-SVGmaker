@@ -9,7 +9,18 @@ const inquirer = require("inquirer");
     // select choice (rawlist) for shape: circle, triangle, square;
     // input shape color choice = keyword or hexadecimal #);
 
+// const prompt = inquirer.createPromptModule();
+
+// prompt(questions).then();
+
+
+// ====================================================================================================
+
+
+
 // TODO: write function to create SVG file called 'logo.svg'
     // output text in CLI = "Generated logo.svg" after
     // then 300x200 pixel img that matches choices is shown
+
+
 
