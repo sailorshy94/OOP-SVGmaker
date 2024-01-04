@@ -1,12 +1,22 @@
 // imports inquirer module
 const inquirer = require("inquirer");
 
+// imports fs to create svg files
+
 // TODO: import shapes.js
 // const shapes = require("./library/shapes");
 
 // ====================================================================================================================
 // TODO: create function to write svg file
-
+// second parameter would be function to create shape
+// function writeToSVG() {
+//     const = ();
+//     fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
+//         if(err) {
+//             console.err(err);
+//         }
+//     });
+// };
 
 // ====================================================================================================================
 
@@ -29,14 +39,14 @@ function init() {
             type: "input",
             message: "Please enter up to 3 letters",
             name: "text",
-            // validate: function (text) {
-            //     if (text <= 3) {
-            //         return true;
-            //     } else {
-            //         console.log("Please enter no more than 3 letters");
-            //         return false;
-            //     }
-            // }
+            validate: function (text) {
+                if (text.length <= 3) {
+                    return true;
+                } else {
+                    console.log("Please enter no more than 3 letters");
+                    return false;
+                }
+            }
         },
         {
             type: "input",
@@ -60,11 +70,14 @@ function init() {
 
     ])
 
-    // TODO: console log data in terminal 
-    .then((data) => {
-        console.log("ANSWERS", data);
-    });
-    // TODO: pass function to create svg file
+        // TODO: console log data in terminal 
+        .then((data) => {
+            console.log("ANSWERS", data);
+             // TODO: pass function to create svg file
+            // function create shape goes here ("logo.svg", data);
+            // output text in CLI = "Generated logo.svg" after
+            console.log("Generated logo.svg");
+        });
     // pass user data from terminal to shapes?
 };
 
@@ -74,7 +87,6 @@ function init() {
 init();
 
 // TODO: write function to create SVG file called 'logo.svg'
-// output text in CLI = "Generated logo.svg" after
 // then 300x200 pixel img that matches choices is shown
 
 
