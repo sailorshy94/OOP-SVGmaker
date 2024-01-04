@@ -8,6 +8,7 @@ const inquirer = require("inquirer");
 
 // ====================================================================================================================
 // TODO: create function to write svg file
+// TODO: write function to create SVG file called 'logo.svg'
 // second parameter would be function to create shape
 // function writeToSVG() {
 //     const = ();
@@ -86,7 +87,7 @@ function init() {
 // TODO: call init function @ end of file
 init();
 
-// TODO: write function to create SVG file called 'logo.svg'
+
 // then 300x200 pixel img that matches choices is shown
 
 

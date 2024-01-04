@@ -3,21 +3,28 @@
 // common functions and properties can do in Shape parent class (use inheritance to reuse code in children)
 // can use constructor? - build templated object, can apply to all shapes?
 
+class Shape {
 
-// Triangle - class
+}
+
+class Triangle extends Shape {
+
+}
 // if ( === "triangle") {
 
 // }
 // --------------------------------------------------------------------------------------------
 
-// Circle - class
+class Circle extends Shape {
+}
 // if ( === "circle") {
 
 // }
 
 // --------------------------------------------------------------------------------------------
 
-// Square - class
+class Square extends Shape {
+}
 // if ( === "square") {
 
 // }
@@ -25,3 +32,4 @@
 // --------------------------------------------------------------------------------------------
 
 // TODO: export shapes
+// module.exports = Shape();
