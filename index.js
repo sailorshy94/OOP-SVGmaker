@@ -62,7 +62,7 @@ function init() {
 
     // TODO: console log data in terminal 
     .then((data) => {
-        console.log("DATA", data);
+        console.log("ANSWERS", data);
     });
     // TODO: pass function to create svg file
     // pass user data from terminal to shapes?
@@ -71,7 +71,7 @@ function init() {
 // ====================================================================================================
 
 // TODO: call init function @ end of file
-
+init();
 
 // TODO: write function to create SVG file called 'logo.svg'
 // output text in CLI = "Generated logo.svg" after
