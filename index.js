@@ -4,6 +4,13 @@ const inquirer = require("inquirer");
 // TODO: import shapes.js
 // const shapes = require("./library/shapes");
 
+// ====================================================================================================================
+// TODO: create function to write svg file
+
+
+// ====================================================================================================================
+
+
 // TODO: set up an initializer function
 
 function init() {
@@ -20,27 +27,45 @@ function init() {
     questions([
         {
             type: "input",
-            message:"",
-            name: "",
-            validate:,
+            message: "Please enter up to 3 letters",
+            name: "text",
+            // validate: function (text) {
+            //     if (text <= 3) {
+            //         return true;
+            //     } else {
+            //         console.log("Please enter no more than 3 letters");
+            //         return false;
+            //     }
+            // }
         },
         {
             type: "input",
-            message:"",
-            name: "", 
+            message: "Please enter a color for your text",
+            name: "textColor",
         },
         {
             type: "rawlist",
-            message:"",
-            name: "",
+            message: "Please select desired shape",
+            choices: [
+                "triangle",
+                "circle",
+                "square",],
+            name: "type",
         },
         {
             type: "input",
-            message:"",
-            name: "",
+            message: "Please enter a color for the shape",
+            name: "shapeColor",
         }
 
-    ]);
+    ])
+
+    // TODO: console log data in terminal 
+    .then((data) => {
+        console.log("DATA", data);
+    });
+    // TODO: pass function to create svg file
+    // pass user data from terminal to shapes?
 };
 
 // ====================================================================================================
