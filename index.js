@@ -26,12 +26,6 @@ const inquirer = require("inquirer");
 
 function init() {
 
-    // TODO: create prompt module to ask questions about SVG
-    // input = 3 or less characters;
-    // input text color choice = keyword or hexadecimal #);
-    // select choice (rawlist) for shape: circle, triangle, square;
-    // input shape color choice = keyword or hexadecimal #);
-
     const questions = inquirer.createPromptModule();
 
     // prompt(questions).then();
@@ -74,9 +68,11 @@ function init() {
         // TODO: console log data in terminal 
         .then((data) => {
             console.log("ANSWERS", data);
+            // console.log(data.text);
+            // console.log(data.textColor);
+            // console.log(data.type);
+            // console.log(data.shapeColor);
              // TODO: pass function to create svg file
-            // function create shape goes here ("logo.svg", data);
-            // output text in CLI = "Generated logo.svg" after
             console.log("Generated logo.svg");
         });
     // pass user data from terminal to shapes?
