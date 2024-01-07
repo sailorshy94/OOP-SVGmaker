@@ -5,11 +5,11 @@
 // common functions and properties can do in Shape parent class (use inheritance to reuse code in children)
 
 class Shape {
-    constructor(text, textColor, type, shapeColor) {
+    constructor(text, textColor, type, color) {
         this.text = text;
         this.textColor = textColor;
         this.type = type;
-        this.shapeColor = shapeColor;
+        this.color = color;
     }
 };
 
@@ -17,9 +17,9 @@ class Shape {
 
 // extends creates triangle class that is a child of shape
 class Triangle extends Shape {
-    constructor(text, textColor, type, shapeColor) {
+    constructor(text, textColor, type, color) {
         // super calls Shape into constructor for Triangle
-        super(text, textColor, type, shapeColor);
+        super(text, textColor, type, color);
     }
 }
 const triangle = new Triangle("AAA", "yellow", "triangle", "green");
@@ -32,8 +32,8 @@ console.log ("TEST", triangle);
 
 // extends creates circle class that is a child of shape
 class Circle extends Shape {
-    constructor(text, textColor, type, shapeColor) {
-        super(text, textColor, type, shapeColor);
+    constructor(text, textColor, type, color) {
+        super(text, textColor, type, color);
     }
 }
 
@@ -48,8 +48,8 @@ console.log ("TEST", circle);
 
 // extends creates square class that is a child of shape
 class Square extends Shape {
-    constructor(text, textColor, type, shapeColor) {
-        super(text, textColor, type, shapeColor);
+    constructor(text, textColor, type, color) {
+        super(text, textColor, type, color);
     }
 }
 

@@ -60,7 +60,7 @@ function init() {
         {
             type: "input",
             message: "Please enter a color for the shape",
-            name: "shapeColor",
+            name: "color",
         }
 
     ])
