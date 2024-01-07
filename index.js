@@ -11,7 +11,7 @@ const inquirer = require("inquirer");
 // TODO: write function to create SVG file called 'logo.svg'
 // second parameter would be function to create shape
 // function writeToSVG() {
-//     const = ();
+//     const shapes = shape function(data);
 //     fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
 //         if(err) {
 //             console.err(err);
