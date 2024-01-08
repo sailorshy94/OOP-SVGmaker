@@ -1,25 +1,42 @@
-
-// TODO: set up test suites - 3?
-
-// TODO: set up test cases for each shape
-    // test for render() method that returns str for corresponding SVG file w/given shape color
-    // EXAMPLE) 
-    // const shape = new Triangle();
-    // shape.setColor("blue");
-    // expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
-
 const Triangle = require("../shapes.js");
+const Circle = require("../shapes.js");
+const Square = require("../shapes.js");
 
 // creates a test suite for Shape
 describe("Shape", () => {
     // creates test to check that Triangle renders Triangle svg w/ the specified color
     describe("Triangle", () => {
         it("should render a triangle svg with the color green", () => {
-            const shape = new Triangle("AAA", "blue", "triangle", "green");
+            const shape = new Triangle("", "", "triangle", "green");
             shape.color;
-            console.log(shape.color);
             // copied over polygon svg created in my Sandbox test files
-            // expect(shape.render()).toEqual('<polygon points="0, 200 120, 0 300, 300" fill="green"/>');
+            expect(shape.render()).toEqual('<polygon points="0, 200 120, 0 300, 300" fill="green"/>');
+        });
+    })
+});
+
+
+describe("Shape", () => {
+    // creates test to check that Circle renders Circle svg w/ the specified color
+    describe("Circle", () => {
+        it("should render a circle svg with the color green", () => {
+            const shape = new Circle("", "", "circle", "green");
+            shape.color;
+            // copied over circle svg created in my Sandbox test files
+            expect(shape.render()).toEqual('<circle cx="150" cy="100" r="100" fill="green"/>');
+        });
+    });
+});
+
+// creates a test suite for Shape
+describe("Shape", () => {
+    // creates test to check that Square renders square svg w/ the specified color
+    describe("Square", () => {
+        it("should render a square svg with the color green", () => {
+            const shape = new Square("", "", "square", "green");
+            shape.color;
+            // copied over circle svg created in my Sandbox test files
+            expect(shape.render()).toEqual('<rect x="0" y="0" width="200" height="200" fill="green"/>');
         });
     });
 });

@@ -1,23 +1,34 @@
 // imports inquirer module
 const inquirer = require("inquirer");
-
 // imports fs to create svg files
-
-// TODO: import shapes.js
-// const shapes = require("./library/shapes");
+const fs = require("fs");
+// imports shapes.js
+const shapes = require("./library/shapes");
 
 // ====================================================================================================================
-// TODO: create function to write svg file
-// TODO: write function to create SVG file called 'logo.svg'
-// second parameter would be function to create shape
-// function writeToSVG() {
-//     const shapes = shape function(data);
-//     fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
-//         if(err) {
-//             console.err(err);
+// function writeToFile() {
+//     // if statement creates a new folder for output
+//     if (!fs.existsSync('./md-output')) {
+//         fs.mkdirSync('./md-output');
+//     };
+//     // writes a readme file and places inside of the mdoutput folder
+//     fs.writeFile('./md-output/README.md', md, err => {
+//         if (err) {
+//             console.error(err);
 //         }
 //     });
 // };
+// TODO: create function to write svg file
+// TODO: write function to create SVG file called 'logo.svg'
+// second parameter would be function to create shape
+function writeToSVG() {
+    const shapes = shape function(data);
+    fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
+        if(err) {
+            console.err(err);
+        }
+    });
+};
 
 // ====================================================================================================================
 
@@ -68,11 +79,8 @@ function init() {
         // TODO: console log data in terminal 
         .then((data) => {
             console.log("ANSWERS", data);
-            // console.log(data.text);
-            // console.log(data.textColor);
-            // console.log(data.type);
-            // console.log(data.shapeColor);
-             // TODO: pass function to create svg file
+            // TODO: pass function to create svg file
+            writeToFile("demo.svg", data);
             console.log("Generated logo.svg");
         });
     // pass user data from terminal to shapes?
@@ -80,11 +88,7 @@ function init() {
 
 // ====================================================================================================
 
-// TODO: call init function @ end of file
 init();
-
-
-// then 300x200 pixel img that matches choices is shown
 
 
 
