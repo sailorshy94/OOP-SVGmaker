@@ -6,29 +6,17 @@ const fs = require("fs");
 const shapes = require("./library/shapes");
 
 // ====================================================================================================================
-// function writeToFile() {
-//     // if statement creates a new folder for output
-//     if (!fs.existsSync('./md-output')) {
-//         fs.mkdirSync('./md-output');
-//     };
-//     // writes a readme file and places inside of the mdoutput folder
-//     fs.writeFile('./md-output/README.md', md, err => {
-//         if (err) {
-//             console.error(err);
-//         }
-//     });
-// };
 // TODO: create function to write svg file
 // TODO: write function to create SVG file called 'logo.svg'
 // second parameter would be function to create shape
-function writeToSVG() {
-    const shapes = shape function(data);
-    fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
-        if(err) {
-            console.err(err);
-        }
-    });
-};
+// function writeToSVG() {
+//     const shapes = shape function(data);
+//     fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
+//         if(err) {
+//             console.err(err);
+//         }
+//     });
+// };
 
 // ====================================================================================================================
 
@@ -80,7 +68,7 @@ function init() {
         .then((data) => {
             console.log("ANSWERS", data);
             // TODO: pass function to create svg file
-            writeToFile("demo.svg", data);
+            writeToFile("logo.svg", data);
             console.log("Generated logo.svg");
         });
     // pass user data from terminal to shapes?

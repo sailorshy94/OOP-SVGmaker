@@ -1,6 +1,5 @@
-const Triangle = require("../shapes.js");
-const Circle = require("../shapes.js");
-const Square = require("../shapes.js");
+const {Triangle, Circle, Square} = require("../shapes.js");
+
 
 // creates a test suite for Shape
 describe("Shape", () => {
