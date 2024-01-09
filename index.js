@@ -52,7 +52,7 @@ function init() {
         // console log data in terminal 
         .then((data) => {
             console.log("ANSWERS", data);
-            // we want to decide with either if else statements or switch cases, if data.shape = circle then create a circle, and then pass it the necessary parameters
+            // logic to determine shape selected and render it based on parameters it is passed
             let shape;
             if (data.type === "triangle") {
                 shape = new Triangle(data.text, data.textColor, data.type, data.color);
