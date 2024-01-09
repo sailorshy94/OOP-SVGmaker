@@ -9,7 +9,9 @@ describe("Shape", () => {
             const shape = new Triangle("", "", "triangle", "green");
             shape.color;
             // copied over polygon svg created in my Sandbox test files
-            expect(shape.render()).toEqual('<polygon points="0, 200 120, 0 300, 300" fill="green"/>');
+            expect(shape.render()).toEqual(`<svg version="1.1"
+            width="300" height="200"
+            xmlns="http://www.w3.org/2000/svg"><polygon points="0, 200 120, 0 300, 300" fill="green"/>`);
         });
     })
 });

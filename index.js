@@ -61,10 +61,10 @@ function init() {
             } else {
                 shape = new Square(data.text, data.textColor, data.type, data.color);
             };
+            console.log("Generated logo.svg");
             // passes function to create svg file
             return fs.writeFileSync("logo.svg", shape.render());
         });
-    console.log("Generated logo.svg");
 };
 
 // ====================================================================================================
