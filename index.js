@@ -3,26 +3,11 @@ const inquirer = require("inquirer");
 // imports fs to create svg files
 const fs = require("fs");
 // imports shapes.js
-const shapes = require("./library/shapes");
-
-// ====================================================================================================================
-// TODO: create function to write svg file
-// TODO: write function to create SVG file called 'logo.svg'
-// second parameter would be function to create shape
-// function writeToSVG() {
-//     const shapes = shape function(data);
-//     fs.writeFile("./SVG-output-exs/logo.svg", shape function, err => {
-//         if(err) {
-//             console.err(err);
-//         }
-//     });
-// };
+const { Triangle, Circle, Square } = require("./library/shapes");
 
 // ====================================================================================================================
 
-
-// TODO: set up an initializer function
-
+// set up an initializer function
 function init() {
 
     const questions = inquirer.createPromptModule();
@@ -64,14 +49,22 @@ function init() {
 
     ])
 
-        // TODO: console log data in terminal 
+        // console log data in terminal 
         .then((data) => {
             console.log("ANSWERS", data);
-            // TODO: pass function to create svg file
-            writeToFile("logo.svg", data);
-            console.log("Generated logo.svg");
+            // we want to decide with either if else statements or switch cases, if data.shape = circle then create a circle, and then pass it the necessary parameters
+            let shape;
+            if (data.type === "triangle") {
+                shape = new Triangle(data.text, data.textColor, data.type, data.color);
+            } else if (data.type === "circle") {
+                shape = new Circle(data.text, data.textColor, data.type, data.color);
+            } else {
+                shape = new Square(data.text, data.textColor, data.type, data.color);
+            };
+            // passes function to create svg file
+            return fs.writeFileSync("logo.svg", shape.render());
         });
-    // pass user data from terminal to shapes?
+    console.log("Generated logo.svg");
 };
 
 // ====================================================================================================

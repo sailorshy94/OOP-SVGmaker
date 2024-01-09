@@ -7,10 +7,6 @@ class Shape {
         this.type = type;
         this.color = color;
     }
-
-    render() {
-        console.log("");
-    }
 };
 
 // --------------------------------------------------------------------------------------------
@@ -22,7 +18,9 @@ class Triangle extends Shape {
         super(text, textColor, type, color);
     }
     render() {
-        return `<polygon points="0, 200 120, 0 300, 300" fill="${this.color}"/>`;
+        return `<svg version="1.1"
+        width="300" height="200"
+        xmlns="http://www.w3.org/2000/svg"><polygon points="0, 200 120, 0 300, 300" fill="${this.color}"/><text x="120" y="155" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text></svg>`;
     }
 };
 
@@ -34,7 +32,9 @@ class Circle extends Shape {
         super(text, textColor, type, color);
     }
     render() {
-        return `<circle cx="150" cy="100" r="100" fill="${this.color}"/>`;
+        return `<svg version="1.1"
+        width="300" height="200"
+        xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="100" fill="${this.color}"/><text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text></svg>`;
     }
 };
 
@@ -46,25 +46,13 @@ class Square extends Shape {
         super(text, textColor, type, color);
     }
     render() {
-        return `<rect x="0" y="0" width="200" height="200" fill="${this.color}"/>`;
+        return `<svg version="1.1"
+        width="300" height="200"
+        xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="200" height="200" fill="${this.color}"/><text x="100" y="120" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text>
+        </svg>`;
     }
 };
 
-// TODO: create function to render shapes????
-
-// let shape;
-
-// if (type === "triangle") {
-//     shape = "Polygon";
-// }
-
-// if (type === "Circle") {
-//     shape = "Circle";
-// }
-
-// if (type === "square") {
-//     shape = "Rectangle";
-// }
 // --------------------------------------------------------------------------------------------
 
 module.exports = {Triangle, Circle, Square};
