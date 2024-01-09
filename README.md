@@ -8,7 +8,7 @@ This project was created to take in user input that is submitted into the CLI an
 ![Image Link]()
 
 ## Video Walkthrough
-[Video Link]("https://drive.google.com/file/d/1NUcYap6O6h9NBvMKLE65uh8rZcThjuXY/view")
+[Video Link]("https://drive.google.com/file/d/1NUcYap6O6h9NBvMKLE65uh8rZcThjuXY/view?usp=sharing")
 
 ## Links
 [Github Repo Link](https://github.com/sailorshy94/OOP-SVGmaker)  
